@@ -4,12 +4,13 @@ const TodoForm = props => {
     return (
         <form onSubmit={props.addItem}>
         <input
-        name="item"
-        placeholder="To be did"
-        value={props.item}
-        onChange={props.changeHandler}
+            name="item"
+            placeholder="Entry"
+            value={props.item}
+            onChange={props.changeHandler}
         />
         <button type="submit">Add</button>
+        <button type="submit">Clear</button>
         </form>
     );
 };

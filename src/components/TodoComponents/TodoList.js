@@ -1,41 +1,14 @@
-import React from 'react';
-import { list } from "postcss";
-import TodoForm from './TodoForm';
-// your components will all go in this `component` directory.
-// feel free to change this component.js into TodoList.js
+import React from "react";
+import Todo from '.Todo';
 
-class TodoList extends React.Component {
-    constructor() {
-        super();
-        this.state = {
-            todoList: list,
-            item: "",
-        };
-    }
-    changeHandler = e => {
-        this.setState({
-            [e.target.name]: e.target.value
-        });
-    };
-    addItem = e => {
-        e.preventDefault();
-        this.setState({
-            todoList: [...this.state.todoList, {
-                item: this.state.item,
-            }
-        ],
-        item: "",
-        });
-    };
-    render() {
-        return (
-            <div>
-                <h1>To-do List:</h1>
-                <TodoList todoList={this.state.todoList} />
-                <TodoForm addItem={this.addItem} />
-            </div>
-        );
-    }
-}
+const TodoList = props => {
+    return (
+        <div className="class-list">
+        {props.app.map(item => (
+            <Todo todo={item} key={item.name} />
+        ))}
+        </div>
+    );
+};
 
 export default TodoList;
