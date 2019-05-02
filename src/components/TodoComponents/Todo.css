@@ -1,8 +1,8 @@
 
-@font-face {
+/* @font-face {
   font-family: 'Cormorant Unicase';
   src: url('https://fonts.googleapis.com/css?family=Cormorant+Unicase" rel="stylesheet');
-}
+} */
 
 html,
 body {
@@ -14,6 +14,7 @@ body {
 
 body {
   background-color: blue;
+  font-family: 'Cormorant Unicase', sans-serif;
 }
 
 h1,
@@ -26,7 +27,6 @@ div,
 p,
 span {
   color: white;
-  font-family: 'Cormorant Unicase', sans-serif;
 }
 
 .cool-style {
@@ -65,7 +65,8 @@ h1 {
   text-align: left;
   margin: 4px 0;
   padding-left: 8px;
-  font-family: 'Cormorant Unicase', sans-serif;
+  font-family: sans-serif;
+  cursor: pointer;
 }
 
 .item.purchased {
