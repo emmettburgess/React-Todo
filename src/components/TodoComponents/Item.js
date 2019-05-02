@@ -1,8 +1,8 @@
 import React from "react";
 import Entry from './Entry';
 
-const Item = props => {
+const Identity = props => {
     return <Entry todo={props.todo} />
 };
 
-export default Item;
+export default Identity;

@@ -1,12 +1,11 @@
 import React from "react";
-import Item from './Item';
+import Identity from './Identity';
 
 const Todo = props => {
     return (
         <div classNname="todo-card">
         <div className="todo-info">
-        {/* <h3>{props.todo.item}</h3> */}
-        <Item todo={props.todo} />
+        <Identity todo={props.todo} />
         </div>
         </div>
     );
