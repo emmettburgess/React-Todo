@@ -1,14 +1,21 @@
-import React from "react";
-import Identity from './Identity';
+import React from 'react';
+import './Todo.css';
 
-const Todo = props => {
+function Todo(props) {
+    let bananaNames = "item";
+    if (props.todo.completed) {
+        bananaNames += " purchased";
+    }
+
+    function updateCompletedHere() {
+        props.toggleComplete(props.todo.id)
+    }
+
     return (
-        <div classNname="todo-card">
-        <div className="todo-info">
-        <Identity todo={props.todo} />
-        </div>
+        <div className = {bananaNames} onClick={updateCompletedHere} >
+            {props.todo.task}
         </div>
     );
-};
+}
 
 export default Todo;
